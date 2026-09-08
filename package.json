@@ -1,0 +1,42 @@
+{
+  "name": "sol-trader-2026",
+  "version": "1.0.0",
+  "description": "2026 Solana trading bot engine: Pump.fun sniper, Jupiter swaps, limit/TP-SL orders, wallet copy-trading, Telegram remote control",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "sol-trader": "./dist/main.js"
+  },
+  "main": "./dist/main.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "bundle:mobile": "ncc build src/main.ts -o mobile -m",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "balance": "node dist/main.js wallet balance",
+    "snipe": "node dist/main.js snipe",
+    "copy": "node dist/main.js copy",
+    "orders": "node dist/main.js order run",
+    "bot": "node dist/main.js bot",
+    "status": "node dist/main.js status"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.12",
+    "@solana/web3.js": "^1.98.0",
+    "bip39": "^3.1.0",
+    "bs58": "^6.0.0",
+    "commander": "^13.1.0",
+    "dotenv": "^17.2.0",
+    "ed25519-hd-key": "^2.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/ws": "^8.18.1",
+    "@vercel/ncc": "^0.45.0",
+    "typescript": "^5.8.3"
+  }
+}

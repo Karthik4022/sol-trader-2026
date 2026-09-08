@@ -1,0 +1,16 @@
+node_modules/
+dist/
+mobile/
+.env
+data/wallets/
+data/orders.json
+data/*.log
+data/users.vault
+data/users.vault.migrated
+data/.users-vault-key
+data/users.sqlite
+data/users.sqlite-shm
+data/users.sqlite-wal
+data/users/
+*.tsbuildinfo
+.DS_Store
